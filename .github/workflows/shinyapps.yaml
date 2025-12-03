@@ -35,7 +35,9 @@ jobs:
 
       - name: Install the LearnStatsVis Package
         run: |
-          devtools::install(".", dependencies = FALSE)
+          # must use devtools to install from GitHub, otherwise errors
+          # occur when deploying to shinyapps.io
+          devtools::install_github("fortune9/Learn-statistics-by-visualization")
         shell: Rscript {0}
 
       - name: Configure rsconnect for shinyapps.io
