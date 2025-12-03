@@ -3,7 +3,7 @@ pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   intro: intro.html
-last_built: 2025-12-03T02:40Z
+last_built: 2025-12-03T02:48Z
 urls:
   reference: https://fortune9.github.io/Learn-statistics-by-visualization/reference
   article: https://fortune9.github.io/Learn-statistics-by-visualization/articles
