@@ -46,5 +46,5 @@ jobs:
       - name: Deploy to shinyapps.io
         run: |
           # Deploy the actual app from the shiny directory
-          R -e "rsconnect::deployApp('shiny/', appName = '${{ vars.SHINYAPPS_APP_NAME }}', account = '${{ secrets.SHINYAPPS_ACCOUNT_NAME }}')"
+          rsconnect::deployApp('shiny/', appName = '${{ vars.SHINYAPPS_APP_NAME }}', account = '${{ secrets.SHINYAPPS_ACCOUNT_NAME }}')
         shell: Rscript {0}
