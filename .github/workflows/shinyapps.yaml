@@ -17,12 +17,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-#      - name: Setup R
-#        uses: r-lib/actions/setup-r@v2
-#        with:
-#          use-public-rspm: true
-#          r-version: '4.5.1'
-#
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+          r-version: '4.5.1'
+
 #      - name: Install Dependencies
 #        run: |
 #          install.packages(c("shiny", "ggplot2", "dplyr", "rsconnect"))
@@ -35,6 +35,7 @@ jobs:
 
       - name: Install the LearnStatsVis Package
         run: |
+          install.packages("devtools","rsconnect")
           # must use devtools to install from GitHub, otherwise errors
           # occur when deploying to shinyapps.io
           devtools::install_github("fortune9/Learn-statistics-by-visualization")
